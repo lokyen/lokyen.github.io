@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard() {
+export default function MediaCard1() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -16,13 +16,13 @@ export default function MediaCard() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Personal Website
+          Tool Shed
         </Typography>
         <Typography>
-          HTML | CSS | JAVASCRIPT | REACT | MATERIAL UI
+            HTML | CSS | JAVSCRIPT | REACT | DOCKER | POSTGRESQL | SEQUELIZE 
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          My personal website which I created to get a better understanding of React, Material UI, and JavaScript.
+          A web application that enables users to post their tools for rent to nearby users.
         </Typography>
       </CardContent>
       <CardActions>
@@ -33,4 +33,3 @@ export default function MediaCard() {
 
   );
 }
-

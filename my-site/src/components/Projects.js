@@ -1,13 +1,13 @@
 import React from "react";
 import MediaCard from './MediaCard';
+import MediaCard1 from './MediaCard1';
+import MediaCard2 from './MediaCard2';
 import Grid from '@mui/material/Grid';
 
 //TO DO:
 // Change the contents of the boxes
 // Link to github
 // Add image
-// Add technologies used 
-// Create Descriptions
 
 const Projects = () => {
     return<div className="App">
@@ -18,13 +18,13 @@ const Projects = () => {
                     <MediaCard />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <MediaCard />
+                    <MediaCard1 />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <MediaCard />
+                    <MediaCard2 />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <MediaCard />
+                    
                 </Grid>
             </Grid>
             </div>  
