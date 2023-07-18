@@ -1,8 +1,10 @@
 import React from "react";
+import BioCard from "./BioCard";
 
 const Home = () => {
-    return <div className="App"> 
-    <h2>Welcome to my website! It's still a work-in-progress!</h2></div>
+    return<div className="App">
+       <BioCard />
+    </div>
 };
 
 export default Home;

@@ -4,11 +4,6 @@ import MediaCard1 from './MediaCard1';
 import MediaCard2 from './MediaCard2';
 import Grid from '@mui/material/Grid';
 
-//TO DO:
-// Change the contents of the boxes
-// Link to github
-// Add image
-
 const Projects = () => {
     return<div className="App">
         <h2>Technical Projects</h2>
