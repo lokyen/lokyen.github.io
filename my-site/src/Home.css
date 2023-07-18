@@ -1,0 +1,9 @@
+.biocard{
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+}
+
+.greeting{
+    padding-top: 50px;
+}

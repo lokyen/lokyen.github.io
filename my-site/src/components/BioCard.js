@@ -1,9 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/joy/Avatar';
-import Chip from '@mui/joy/Chip';
 import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import ButtonGroup from '@mui/joy/ButtonGroup';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
@@ -23,10 +20,10 @@ export default function BioCard() {
       <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
         <Avatar src="/static/images/avatar/1.jpg" sx={{ '--Avatar-size': '4rem' }} />
         <Typography fontSize="lg" fontWeight="lg" sx={{ mt: 1, mb: 0.5 }}>
-          Destinee
+          
         </Typography>
-        <Typography level="body2" sx={{ maxWidth: '24ch' }}>
-          Hi, I'm Destinee! I'm currently learning about web development. I enjoy taking walks, learning Japanese, travelling, and messing around with Blender.
+        <Typography level="body1" sx={{ maxWidth: '24ch' }}>
+          I'm currently learning about web development. I enjoy taking walks, learning Japanese, travelling, and messing around with Blender.
         </Typography>
         <Box
           sx={{
@@ -36,6 +33,7 @@ export default function BioCard() {
             '& > button': { borderRadius: '2rem' },
           }}
         >
+          {/*
           <IconButton size="sm" variant="plain" color="neutral">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +77,8 @@ export default function BioCard() {
               />
             </svg>
           </IconButton>
+          */}
+          {/*
           <IconButton size="sm" variant="plain" color="neutral">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,6 +92,7 @@ export default function BioCard() {
               />
             </svg>
           </IconButton>
+        */}
         </Box>
       </CardContent>
       <CardOverflow sx={{ bgcolor: 'background.level1' }}>
