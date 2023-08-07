@@ -21,7 +21,7 @@ export default function MediaCard() {
           Personal Website
         </Typography>
         <Typography variant="body2" color="text.secondary" textAlign="justify">
-          My personal website which I created to get a better understanding of React and JavaScript.
+          My personal website which I created to get a better understanding of React and JavaScript. It's currently a work-in-progress project.
         </Typography>
       </CardContent>
       <CardActions>
