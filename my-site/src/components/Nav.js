@@ -8,19 +8,20 @@ import Button from '@mui/material/Button';
 import AdbIcon from '@mui/icons-material/Adb';
 import Typography from '@mui/material/Typography';
 import {Link} from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+import MenuItem from '@mui/material/MenuItem';
 
 const pages = ['Projects', 'Resume', 'Blog'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-  
+  const handleOpenNavMenu = (event) => {
+  setAnchorElNav(event.currentTarget);
+};
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -79,25 +80,36 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Menu 
-              sx={{ mt: '45px' }}
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="open navigation menu"
+              onClick={handleOpenNavMenu}>
+              <MenuIcon sx={{ color: 'black' }} />
+            </IconButton>
+
+            <Menu
               id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+              anchorEl={anchorElNav}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
             >
-            </Menu>
-          </Box>
+            {pages.map((page) => (
+              <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <Link
+                  to={`/${page}`}
+                  style={{ textDecoration: 'none', color: 'black' }}
+                >
+                {page}
+                </Link>
+            </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+
         </Toolbar>
       </Container>
     </AppBar>
